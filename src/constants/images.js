@@ -1,4 +1,4 @@
-import logo from '../assets/logo_test.png';
+import logo from '../assets/logo_transparent.png';
 
 export default {
     logo
