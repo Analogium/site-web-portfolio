@@ -5,14 +5,12 @@
     justify-content: space-between;
     align-items: center;
   
-    background: linear-gradient(90deg, rgba(0,255,190,1) 0%, rgba(9,20,121,1) 91%);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+
     position: fixed;
     z-index: 2;
 
   }
+
   
   .app__navbar-logo {
     display: flex;
@@ -27,6 +25,11 @@
       @media screen and (min-width: 2000px) {
         width: 200px;
         height: 200px;
+      }
+
+      @media screen and (max-width: 800px){
+        width: 80px;
+        height: 80px;
       }
     }
   }
@@ -61,7 +64,8 @@
         flex-direction: column;
   
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 1000;
+        font-size: 2vh;
   
         transition: all 0.3s ease-in-out;
   
@@ -109,7 +113,7 @@
   
       padding: 1rem;
   
-      width: 80%;
+      width: 35%;
       height: 100vh;
       
       display: flex;
