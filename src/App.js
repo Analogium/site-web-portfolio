@@ -1,5 +1,5 @@
 import {Navbar, BackgroundVideo} from './components';
-import {Header} from './containers';
+import {Header, About, Skills, Footer} from './containers';
 import './App.scss';
 import React from 'react';
 
@@ -10,6 +10,9 @@ function App() {
       <Navbar />
       
       <Header />
+      <About />
+      <Skills />
+      <Footer />
     </div>
   );
 }

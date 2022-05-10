@@ -3,7 +3,9 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <section id='contact'>
+      <div>Footer</div>
+    </section>
   )
 }
 
