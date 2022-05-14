@@ -2,6 +2,8 @@ import React from 'react'
 import './Header.scss'
 
 import { motion } from 'framer-motion';
+import { images } from '../../constants';
+import CV from '../../assets/CV_theo_lambert.pdf';
 
 
 const Header = () => {
@@ -15,14 +17,21 @@ const Header = () => {
         >
           <div className="app__header-badge">
             <div className="badge-cmp app__flex">
-              <div style={{ marginLeft: 20 }}>
-                <h1 className="head-text">Bienvenue sur mon site portfolio !</h1>
+              <div class="circular--landscape"> 
+                <img src={images.me} alt='Ma tête'/> 
               </div>
             </div>
 
-            <div className="tag-cmp app__flex">
-              <p className="p-text">Vous trouverez sur ce site des infos me concernant ainsi que des affiches de mes différents projets que j'ai réalisé lors de ma vie en tant que développeur web.</p>
+            <div className="app__header-text">
+              <div style={{ marginLeft: 20 }}>
+                <h1 className='p-text'>Bonjour !</h1>
+                <p className="p-text">Je m'appelle <strong>Théo</strong> et je suis <strong>développeur full stack</strong>.</p>
+              </div>
+              <div className='app__header-download'>
+                <a href={CV} download>Télécharger mon CV</a>
+              </div>
             </div>
+
           </div>
         </motion.div>
         

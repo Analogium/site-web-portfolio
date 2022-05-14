@@ -8,8 +8,19 @@
         padding-top: 8rem;
     }
 
-    @media screen and (max-width: 450px) {
-        padding: 6rem 1rem 2rem;
+    @media screen and (max-width: 650px) {
+        
+        .experience__container{
+            grid-template-columns: 1fr;
+
+            &> .experience__frontend{
+                height: 100%;
+            }
+
+            &> .experience__backend{
+                height: 130%;
+            }
+        }
 
     }
 }
@@ -20,28 +31,42 @@
 .app__skills-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    width: 100vw;
+    justify-content: center;
+    margin: 0 5%;
 
 
     h1{
+        width: 25vmax;
+        margin: 0 auto;
         color: var(--lightGray-color);
         font-size: 2.25vmax;
+        text-align: center;
+        border-radius: 2rem;
+        border: 1px solid;
     }
+
+    h2{
+        text-align: center;
+        color: var(--lightGray-color);
+        font-size: 1.5vmax;
+        text-decoration: underline;
+    }
+
 
     .s-text{
         color: var(--lightGray-color);
+        font-size: 1vmax;
     }
 
 }
+
 
 .experience__container{
     padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 10%;
 
 }
 
@@ -58,14 +83,24 @@
     border-color: white;
     cursor: default;
     transform: scale(1.2);
+
 }
+
+
 
 .experience__details{
     display: flex;
     gap: 1rem;
+
+    svg{
+        margin-top: 6px;
+    }
+    
 }
 
 .experience__content {
+    padding-top: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
 }
