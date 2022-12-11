@@ -1,41 +1,57 @@
 import React from 'react'
 import './Header.scss'
 
-import { motion } from 'framer-motion';
-import { images } from '../../constants';
-import CV from '../../assets/CV_theo_lambert.pdf';
+import { images } from '../../constants'
+import {BsTwitter, BsTwitch, BsInstagram, BsFacebook, BsGithub, BsLinkedin} from 'react-icons/bs'
+
 
 
 const Header = () => {
   return (
     <section id='Accueil'>
       <div className="app__header app__flex">
-        <motion.div
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}
-          className="app__header-info"
-        >
-          <div className="app__header-badge">
-            <div className="badge-cmp app__flex">
-              <div class="circular--landscape"> 
-                <img src={images.me} alt='Ma tête'/> 
-              </div>
-            </div>
-
-            <div className="app__header-text">
-              <div style={{ marginLeft: 20 }}>
-                <h1 className='p-text'>Bonjour !</h1>
-                <p className="p-text">Je m'appelle <strong>Théo</strong> et je suis <strong>développeur full stack</strong>.</p>
-              </div>
-              <div className='app__header-download'>
-                <a href={CV} download>Télécharger mon CV</a>
-              </div>
-            </div>
-
+        <div className='content'>
+          <div className='author'>
+            <h1>Theo Lambert</h1>
           </div>
-        </motion.div>
-        
-        
+
+          <div className='job'>
+            <h3>Développeur Web</h3>
+          </div>
+
+        </div>
+        <div className='logo_header'>
+          <img src={images.logo_header} alt='logo-header'/>
+        </div>
+
+        <ul className='social_media'>
+          <li>
+            <a href='https://www.twitch.tv/imaginemylife' >
+              <BsTwitch />
+            </a>
+          </li>
+          <li>
+            <a href='https://www.instagram.com/theo__lmbt/' >
+              <BsInstagram />
+            </a>
+          </li>
+          <li>
+            <a href='https://www.facebook.com/profile.php?id=100005523438840' >
+              <BsFacebook />
+            </a>
+          </li>
+          <li>
+            <a href='https://github.com/Analogium' >
+              <BsGithub />
+            </a>
+          </li>
+          <li>
+            <a href='https://www.linkedin.com/in/lambert-theo-6010211b9/' >
+              <BsLinkedin />
+            </a>
+          </li>
+        </ul>
+      
       </div>
     </section>
   )

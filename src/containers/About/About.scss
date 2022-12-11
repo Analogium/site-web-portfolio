@@ -1,18 +1,95 @@
-.app__about{
+.app__about {
+    flex: 1;
     width: 100%;
     min-height: 100vh;
-    color: white;
-    justify-content: center;
-    margin: 0;
+    flex-direction: column;
 
-    h1{
-        width: 25vmax;
-            margin: 0 auto;
-            color: var(--lightGray-color);
-            font-size: 2.25vmax;
-            text-align: center;
-            border-radius: 2rem;
-            border: 1px solid;
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
     }
+
+    @media screen and (max-width: 450px) {
+        padding: 6rem 1rem 2rem;
+
+    }
+}
+
+.circular--landscape { 
+    display: flex;
+    position: relative; 
+    width: 40vmin; 
+    height: 40vmin; 
+    overflow: hidden; 
+    border-radius: 50%;
+    margin-left: 5%;
+    align-items: center;
+    margin: auto; 
+
+    img {
+        width: 100%; 
+        object-fit: contain;
+    }
+} 
+
+
+.app__about-info {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 0;
+
+    @media screen and (max-width: 1300px) {
+        margin-right: 0rem;
+        padding-top: 2vh;
+    }
+
+
+    .p-text {
+        padding-top: 20px;
+        color: var(--lightGray-color);
+        font-size: 1.75vw;
+        text-align: center;
+    }
+}
+
+.app__about-badge{
+    background-color: var(--primary-color);
+    border: 5px solid;
+    border-color: black;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 7% 5%;
+}
+
+.app__about-text{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.app__about-download{
+    margin: auto;
+    justify-content: center;
+    a{
+        display: block;
+        padding: 10% 20px;
+        text-align: center;
+        border-radius: 2rem;
+        font-size: 1vmax;
+        color: white;
+        text-decoration: none;
+        background-color: var(--primary-color);
+        border: 2px solid;
+        border-color: white;
+    }
+
+    a:hover{
+        background-color: white;
+        color: black;
+    }
+
 }
 

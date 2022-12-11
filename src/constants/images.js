@@ -1,11 +1,10 @@
-import logo from '../assets/logo_transparent.png';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
+import logo from '../assets/logo_blanc.svg';
+import logo_header from '../assets/logo_bleu.svg';
+
 import me from '../assets/moi.jpg';
 
 export default {
     logo,
-    html,
-    css,
+    logo_header,
     me
 }

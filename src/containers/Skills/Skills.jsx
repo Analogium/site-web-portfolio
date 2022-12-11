@@ -60,7 +60,7 @@ const Skills = () => {
                   <BsPatchCheckFill className='s-text'/>
                   <div>
                     <h4 className='s-text'>Python</h4>
-                    <small className='s-text'>6/10</small>
+                    <small className='s-text'>7/10</small>
                   </div>
                 </article>
                 <article className='experience__details'>

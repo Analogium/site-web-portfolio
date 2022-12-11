@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import {images} from '../../constants'
 import  { HiMenuAlt4, HiX} from 'react-icons/hi'
-import {AiOutlineHome} from 'react-icons/ai'
-import {FaRegUser} from 'react-icons/fa'
-import {IoShareSocialOutline} from 'react-icons/io5'
-import {GiSkills} from 'react-icons/gi'
 import {motion} from 'framer-motion'
+import {BsTwitter, BsTwitch, BsInstagram, BsFacebook, BsGithub, BsLinkedin} from 'react-icons/bs'
+
 
 import './Navbar.scss'
 
@@ -13,9 +11,6 @@ const Navbar = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const style = { color: "white", fontSize: "3vhmax" }
-  const data = {'Accueil': <AiOutlineHome style={style}/>, 'informations': <FaRegUser style={style}/>, 'contact': <IoShareSocialOutline style={style}/>,
-   'competences': <GiSkills style={style}/>};
 
 
   return (
@@ -24,9 +19,9 @@ const Navbar = () => {
         <img src={images.logo} alt="logo"/>
       </div>
       <ul className='app__navbar-links'>
-        {['Accueil', 'informations', 'competences', 'contact'].map((item) => (
+        {['informations', 'competences', 'contact'].map((item) => (
           <li className='app__flex p-text'  key={`link-${item}`}>
-            <a href={`#${item}`} title={`${item}`}>{data[item]}</a>
+            <a href={`#${item}`} title={`${item}`} className='link'>{item}</a>
           </li>
         ))}
       </ul>
@@ -40,12 +35,40 @@ const Navbar = () => {
               transition={{ duration: 0.85, ease: 'easeOut'}}
             >
               <HiX onClick={() => setToggle(false)}/>
-              <ul>
-                {['Accueil', 'informations', 'competences', 'contact'].map((item) => (
+              <ul className='menu_link'>
+                {['informations', 'competences', 'contact'].map((item) => (
                   <li   key={item}>
-                    <a href={`#${item}`}>{data[item]}</a>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                   </li>
                 ))}
+              </ul>
+
+              <ul className='social_media_menu'>
+                <li>
+                  <a href='https://www.twitch.tv/imaginemylife' >
+                    <BsTwitch />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://www.instagram.com/theo__lmbt/' >
+                    <BsInstagram />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://www.facebook.com/profile.php?id=100005523438840' >
+                    <BsFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://github.com/Analogium' >
+                    <BsGithub />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://www.linkedin.com/in/lambert-theo-6010211b9/' >
+                    <BsLinkedin />
+                  </a>
+                </li>
               </ul>
 
             </motion.div>
