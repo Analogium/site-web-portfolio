@@ -3,8 +3,10 @@ import logo_header from '../assets/logo_bleu.svg';
 
 import me from '../assets/moi.jpg';
 
-export default {
-    logo,
-    logo_header,
-    me
-}
+const images = {
+  logo,
+  logo_header,
+  me,
+};
+
+export default images;
